@@ -1,5 +1,7 @@
 # FireLink
 App Bomberos
+ 
+ ``` bash
                    ┌───────────┐
                    │   main    │  <- Protegida, solo merges desde release
                    └─────┬─────┘
@@ -31,7 +33,8 @@ App Bomberos
 │ fix/login        │
 └─────────────────┘
 
-🔹## 🔹 Reglas de flujo de trabajo
+```
+## Reglas de flujo de trabajo
 
 ### Ramas personales (`dev-fernando`, `dev-fede`, `dev-nombre`)
 - Crear **Pull Request** a `develop` al terminar features/fixes.  
@@ -93,15 +96,15 @@ git merge release
 Este es el flujo **seguro y ordenado** para que cada integrante del equipo trabaje en su propia rama sin afectar al resto del proyecto.
 
 main
-├── release
-└── develop
-    ├── dev-fernando
-    │   ├── feature/mapa
-    │   └── fix/login
-    ├── dev-fede
-    │   └── feature/notificaciones
-    ├── dev-nombre 
-    │   └── feature/perfil-usuario
+ └──release
+    └── develop
+	    ├── dev-fernando
+	    │   ├── feature/mapa
+	    │   └── fix/login
+	    ├── dev-fede
+	    │   └── feature/notificaciones
+	    ├── dev-nombre 
+	    │   └── feature/perfil-usuario
 
 
 ---
