@@ -95,6 +95,7 @@ git merge release
 
 Este es el flujo **seguro y ordenado** para que cada integrante del equipo trabaje en su propia rama sin afectar al resto del proyecto.
 
+```bash
 main
  └──release
     └── develop
@@ -106,7 +107,7 @@ main
 	    ├── dev-nombre 
 	    │   └── feature/perfil-usuario
 
-
+```
 ---
 
 ###  Paso 1: Clonar el proyecto desde GitHub
