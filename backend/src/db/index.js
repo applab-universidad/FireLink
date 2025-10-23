@@ -1,30 +1,3 @@
-// import { Sequelize } from "sequelize";
-// import { dbConfig } from "./config.js";
-
-// let sequelize;
-
-// if (dbConfig.dialect === "sqlite") {
-//   sequelize = new Sequelize({
-//     dialect: "sqlite",
-//     storage: dbConfig.storage,
-//     logging: dbConfig.logging,
-//   });
-// } else {
-//   sequelize = new Sequelize(
-//     dbConfig.database,
-//     dbConfig.username,
-//     dbConfig.password,
-//     {
-//       host: dbConfig.host,
-//       port: dbConfig.port,
-//       dialect: dbConfig.dialect,
-//       logging: dbConfig.logging,
-//     }
-//   );
-// }
-
-// export { sequelize };
-
 
 import { Sequelize } from 'sequelize';
 import dbConfig from './config.js';

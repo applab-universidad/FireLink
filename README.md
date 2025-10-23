@@ -1,6 +1,9 @@
 # FireLink
 App Bomberos
  
+![gitflow](img/firelinkGitflow.png)
+
+
  ``` bash
                    ┌───────────┐
                    │   main    │  <- Protegida, solo merges desde release
@@ -94,6 +97,8 @@ git merge release
 
 
 Este es el flujo **seguro y ordenado** para que cada integrante del equipo trabaje en su propia rama sin afectar al resto del proyecto.
+
+![Estructura del proyecto](img/estructuraProyecto.png)
 
 ```bash
 main

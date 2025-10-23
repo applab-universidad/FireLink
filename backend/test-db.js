@@ -1,18 +1,3 @@
-// // test-db.js
-// import { sequelize } from "./src/db/index.js";
-
-// (async () => {
-//   try {
-//     await sequelize.authenticate();
-//     console.log(" Conexión establecida correctamente con la base de datos.");
-//   } catch (error) {
-//     console.error(" Error al conectar con la base de datos:");
-//     console.error(error.message);
-//   } finally {
-//     await sequelize.close();
-//   }
-// })();
-
 
 import sequelize from './src/db/index.js';
 
