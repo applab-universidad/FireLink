@@ -125,3 +125,43 @@ git push -u origin dev-federico
 * Revisá tu código antes de subir cambios grandes.
 
 
+## Flujo de trabajo recomendado para ramas personales y develop
+
+### 1. Actualizar tu rama personal con los últimos cambios de `develop` remoto
+
+```bash
+git checkout dev-fernando          # Cambiar a tu rama personal
+git fetch origin                   # Actualizar referencias remotas
+git rebase origin/develop          # Rebase de tu rama personal sobre develop remoto
+```
+2. Trabajar en tus cambios locales en la rama personal (dev-usuario)
+
+Realiza commits limpios y descriptivos.
+
+Si develop avanza, repite el paso 1 para mantener tu rama al día.
+
+3. Subir tus cambios de la rama personal al repositorio remoto
+
+```bash
+git push origin dev-fernando
+```
+
+3. Subir tus cambios de la rama personal al repositorio remoto
+
+```bash
+git push origin dev-fernando
+```
+4. Abrir un Pull Request (PR) desde tu rama personal (dev-fernando) hacia develop
+
+El PR permitirá revisión de código.
+
+Al aceptar el PR, se hará un merge commit para integrar los cambios a develop.
+
+5. Integrar tu rama personal local a la rama develop localmente
+
+```bash
+git checkout develop
+git fetch origin
+git pull origin develop            # Actualizar develop local con remoto
+git merge dev-fernando             # Hacer merge de tu rama personal en develop
+```
