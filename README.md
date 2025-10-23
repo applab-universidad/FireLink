@@ -26,33 +26,33 @@ App Bomberos
 
 ## 🔹 Comandos frecuentes por escenario
 
-| Acción    --->   Comando típico |
+ **Acción    --->   Comando típico**
 
-| Rebase feature → rama personal |
+ **Rebase feature → rama personal** 
 
  ```bash
 git checkout feature/mapa
 git rebase dev-fernando
 ``` 
-| Rebase rama personal → develop |
+ **Rebase rama personal → develop**
 
 ```bash
 git checkout dev-fernando
 git rebase develop
 ```
-| Merge rama personal → develop | 
+ **Merge rama personal → develop**
 
 ```bash
 git checkout develop
 git merge dev-fernando
 ``` 
-| Merge develop → release | 
+ **Merge develop → release**
 
 ```bash
 git checkout release
 git merge develop
 ``` 
-| Merge release → main | 
+ **Merge release → main**
 
 ```bash
 git checkout main
