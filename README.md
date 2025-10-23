@@ -3,40 +3,6 @@ App Bomberos
  
 ![gitflow](img/firelinkGitflow.png)
 
-
- ``` bash
-                   ┌───────────┐
-                   │   main    │  <- Protegida, solo merges desde release
-                   └─────┬─────┘
-                         │
-                         │ Merge release → main
-                         │
-                   ┌─────▼─────┐
-                   │  release  │  <- Preparación de versión, QA
-                   └─────┬─────┘
-                         │ Merge develop → release
-                         │
-                   ┌─────▼─────┐
-                   │ develop   │  <- Integración de todas las ramas de desarrollo
-                   └───┬─┬─────┘
-                       │ │
-        --------------   ---------------
-        │                            │
-┌───────▼───────┐            ┌───────▼───────┐
-│ dev-fernando  │            │ dev-fede      │
-│ - feature/*   │            │ - feature/*   │
-│ - fix/*       │            └───────────────┘
-└───────┬───────┘
-        │ Rebase develop → dev-fernando
-        │
-┌───────▼──────────┐
-│ feature/mapa     │
-└─────────────────┘
-┌───────▼──────────┐
-│ fix/login        │
-└─────────────────┘
-
-```
 ## Reglas de flujo de trabajo
 
 ### Ramas personales (`dev-fernando`, `dev-fede`, `dev-nombre`)
@@ -60,33 +26,33 @@ App Bomberos
 
 ## 🔹 Comandos frecuentes por escenario
 
-| Acción | Comando típico |
-|--------|----------------|
+| Acción    --->   Comando típico |
+
 | Rebase feature → rama personal |
 
  ```bash
 git checkout feature/mapa
 git rebase dev-fernando
 ``` 
-|| Rebase rama personal → develop |
+| Rebase rama personal → develop |
 
- ```bash
+```bash
 git checkout dev-fernando
 git rebase develop
 ```
-|| Merge rama personal → develop | 
+| Merge rama personal → develop | 
 
 ```bash
 git checkout develop
 git merge dev-fernando
 ``` 
-|| Merge develop → release | 
+| Merge develop → release | 
 
 ```bash
 git checkout release
 git merge develop
 ``` 
-|| Merge release → main | 
+| Merge release → main | 
 
 ```bash
 git checkout main
@@ -100,19 +66,6 @@ Este es el flujo **seguro y ordenado** para que cada integrante del equipo traba
 
 ![Estructura del proyecto](img/estructuraProyecto.png)
 
-```bash
-main
- └──release
-    └── develop
-	    ├── dev-fernando
-	    │   ├── feature/mapa
-	    │   └── fix/login
-	    ├── dev-fede
-	    │   └── feature/notificaciones
-	    ├── dev-nombre 
-	    │   └── feature/perfil-usuario
-
-```
 ---
 
 ###  Paso 1: Clonar el proyecto desde GitHub
